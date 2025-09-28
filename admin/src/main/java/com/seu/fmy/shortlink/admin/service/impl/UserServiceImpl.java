@@ -3,6 +3,7 @@ package com.seu.fmy.shortlink.admin.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.seu.fmy.shortlink.admin.common.exception.ClientException;
 import com.seu.fmy.shortlink.admin.dao.entity.UserDO;
 import com.seu.fmy.shortlink.admin.dao.mapper.UserMapper;
 import com.seu.fmy.shortlink.admin.dto.resp.UserRespDTO;
