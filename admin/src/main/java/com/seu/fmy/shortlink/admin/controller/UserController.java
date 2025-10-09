@@ -5,6 +5,7 @@ import cn.hutool.core.bean.BeanUtil;
 import com.seu.fmy.shortlink.admin.common.result.Result;
 import com.seu.fmy.shortlink.admin.common.result.Results;
 import com.seu.fmy.shortlink.admin.dto.req.UserRegisterReqDTO;
+import com.seu.fmy.shortlink.admin.dto.req.UserUpdateReqDTO;
 import com.seu.fmy.shortlink.admin.dto.resp.UserRespDTO;
 import com.seu.fmy.shortlink.admin.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -49,6 +50,16 @@ public class UserController {
     @PostMapping("/api/short-link/v1/user")
     public Result<Void> register(@RequestBody UserRegisterReqDTO requestParam) {
         userService.register(requestParam);
+        return Results.success();
+    }
+
+
+    /**
+     * 修改用户
+     */
+    @PutMapping("/api/short-link/v1/user")
+    public Result<Void> update(@RequestBody UserUpdateReqDTO requestParam) {
+        userService.update(requestParam);
         return Results.success();
     }
 }
