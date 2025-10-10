@@ -3,7 +3,6 @@ package com.seu.fmy.shortlink.admin.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.lang.UUID;
-import cn.hutool.json.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
@@ -20,11 +19,11 @@ import com.seu.fmy.shortlink.admin.dto.resp.UserRespDTO;
 import com.seu.fmy.shortlink.admin.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.redisson.api.RBloomFilter;
+import com.alibaba.fastjson2.JSON;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
-
 import java.util.concurrent.TimeUnit;
-
 import static com.seu.fmy.shortlink.admin.common.enums.UserErrorCodeEnum.USER_NAME_EXIST;
 import static com.seu.fmy.shortlink.admin.common.enums.UserErrorCodeEnum.USER_SAVE_ERROR;
 
@@ -34,7 +33,7 @@ import static com.seu.fmy.shortlink.admin.common.enums.UserErrorCodeEnum.USER_SA
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements UserService {
-
+    private final StringRedisTemplate stringRedisTemplate;
     private final RBloomFilter<String> userRegisterCachePenetrationBloomFilter;
 
     @Override
@@ -106,4 +105,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
     public Boolean checkLogin(String username, String token) {
         return stringRedisTemplate.opsForHash().get("login_" + username, token) != null;
     }
+    @Override
+    public void logout(String username, String token) {
+        if (checkLogin(username, token)) {
+            stringRedisTemplate.delete("login_" + username);
+            return;
+        }
+        throw new ClientException("用户Token不存在或用户未登录");
+    }
+
 }
