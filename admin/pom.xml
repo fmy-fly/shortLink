@@ -8,7 +8,6 @@
         <artifactId>shortlink-all</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>shortlink-admin</artifactId>
     <dependencies>
         <dependency>
@@ -55,5 +54,4 @@
             <artifactId>fastjson2</artifactId>
         </dependency>
     </dependencies>
-
 </project>
