@@ -55,4 +55,14 @@ public class GroupController {
         groupService.deleteGroup(gid);
         return Results.success();
     }
+
+
+    /**
+     * 短链接分组排序
+     */
+    @PostMapping("/api/short-link/v1/group/sort")
+    public Result<Void> sortGroup(@RequestBody List<ShortLinkGroupSortReqDTO> requestParam) {
+        groupService.sortGroup(requestParam);
+        return Results.success();
+    }
 }
