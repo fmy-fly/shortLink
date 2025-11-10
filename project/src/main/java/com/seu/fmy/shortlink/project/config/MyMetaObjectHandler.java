@@ -1,13 +1,4 @@
-package com.seu.fmy.shortlink.admin.config;
-
-/**
- * @ClassName：MyMetaObjectHandler
- * @Author: fmy
- * @Date: 2025/10/9 17:27
- * @Description:
- */
-
-
+package com.seu.fmy.shortlink.project.config;
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
