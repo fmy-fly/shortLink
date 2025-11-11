@@ -3,11 +3,11 @@ package com.seu.fmy.shortlink.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.seu.fmy.shortlink.admin.dao.entity.UserDO;
-import com.seu.fmy.shortlink.admin.dto.req.UserLoginReqDTO;
-import com.seu.fmy.shortlink.admin.dto.req.UserRegisterReqDTO;
-import com.seu.fmy.shortlink.admin.dto.req.UserUpdateReqDTO;
-import com.seu.fmy.shortlink.admin.dto.resp.UserLoginRespDTO;
-import com.seu.fmy.shortlink.admin.dto.resp.UserRespDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.req.UserLoginReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.req.UserRegisterReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.req.UserUpdateReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.resp.UserLoginRespDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.resp.UserRespDTO;
 
 
 /**

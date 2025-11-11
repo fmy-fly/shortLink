@@ -1,4 +1,4 @@
-package com.seu.fmy.shortlink.admin.dto.req;
+package com.seu.fmy.shortlink.admin.remote.dto.req;
 
 
 import lombok.Data;

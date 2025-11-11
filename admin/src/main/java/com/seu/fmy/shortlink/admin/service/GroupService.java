@@ -3,9 +3,9 @@ package com.seu.fmy.shortlink.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.seu.fmy.shortlink.admin.dao.entity.GroupDO;
-import com.seu.fmy.shortlink.admin.dto.req.ShortLinkGroupSortReqDTO;
-import com.seu.fmy.shortlink.admin.dto.req.ShortLinkGroupUpdateReqDTO;
-import com.seu.fmy.shortlink.admin.dto.resp.ShortLinkGroupRespDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkGroupSortReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkGroupUpdateReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.resp.ShortLinkGroupRespDTO;
 
 import java.util.List;
 

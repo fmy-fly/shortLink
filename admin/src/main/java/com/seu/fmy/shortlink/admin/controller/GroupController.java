@@ -3,10 +3,10 @@ package com.seu.fmy.shortlink.admin.controller;
 
 import com.seu.fmy.shortlink.admin.common.result.Result;
 import com.seu.fmy.shortlink.admin.common.result.Results;
-import com.seu.fmy.shortlink.admin.dto.req.ShortLinkGroupSaveReqDTO;
-import com.seu.fmy.shortlink.admin.dto.req.ShortLinkGroupSortReqDTO;
-import com.seu.fmy.shortlink.admin.dto.req.ShortLinkGroupUpdateReqDTO;
-import com.seu.fmy.shortlink.admin.dto.resp.ShortLinkGroupRespDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkGroupSaveReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkGroupSortReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkGroupUpdateReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.resp.ShortLinkGroupRespDTO;
 import com.seu.fmy.shortlink.admin.service.GroupService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
