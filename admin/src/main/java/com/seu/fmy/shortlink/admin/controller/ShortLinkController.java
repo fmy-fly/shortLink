@@ -1,10 +1,16 @@
 package com.seu.fmy.shortlink.admin.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.seu.fmy.shortlink.admin.common.result.Result;
+import com.seu.fmy.shortlink.admin.remote.dto.ShortLinkRemoteService;
+import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkCreateReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkPageReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.resp.ShortLinkCreateRespDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.resp.ShortLinkPageRespDTO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 /**
  * 短链接后管控制层
  */

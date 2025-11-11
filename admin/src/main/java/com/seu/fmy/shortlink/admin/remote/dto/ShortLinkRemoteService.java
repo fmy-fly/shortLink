@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.seu.fmy.shortlink.admin.common.result.Result;
 import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkCreateReqDTO;
 import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkPageReqDTO;
+import com.seu.fmy.shortlink.admin.remote.dto.resp.ShortLinkCreateRespDTO;
 import com.seu.fmy.shortlink.admin.remote.dto.resp.ShortLinkPageRespDTO;
 
 import java.util.HashMap;
@@ -23,7 +24,7 @@ public interface ShortLinkRemoteService {
      * @param requestParam 创建短链接请求参数
      * @return 短链接创建响应
      */
-    default Result<ShortLinkCreateReqDTO> createShortLink(ShortLinkCreateReqDTO requestParam) {
+    default Result<ShortLinkCreateRespDTO> createShortLink(ShortLinkCreateReqDTO requestParam) {
         String resultBodyStr = HttpUtil.post("http://127.0.0.1:8001/api/short-link/v1/create", JSON.toJSONString(requestParam));
         return JSON.parseObject(resultBodyStr, new TypeReference<>() {
         });
