@@ -2,7 +2,7 @@ package com.seu.fmy.shortlink.admin.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.seu.fmy.shortlink.admin.common.result.Result;
-import com.seu.fmy.shortlink.admin.remote.dto.ShortLinkRemoteService;
+import com.seu.fmy.shortlink.admin.remote.ShortLinkRemoteService;
 import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkCreateReqDTO;
 import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkPageReqDTO;
 import com.seu.fmy.shortlink.admin.remote.dto.resp.ShortLinkCreateRespDTO;
