@@ -10,7 +10,6 @@ import com.seu.fmy.shortlink.admin.remote.dto.req.ShortLinkUpdateReqDTO;
 import com.seu.fmy.shortlink.admin.remote.dto.resp.ShortLinkCreateRespDTO;
 import com.seu.fmy.shortlink.admin.remote.dto.resp.ShortLinkPageRespDTO;
 import org.springframework.web.bind.annotation.*;
-
 /**
  * 短链接后管控制层
  */
@@ -34,7 +33,7 @@ public class ShortLinkController {
     /**
      * 修改短链接
      */
-    @PutMapping("/api/short-link/admin/v1/update")
+    @PostMapping("/api/short-link/admin/v1/update")
     public Result<Void> updateShortLink(@RequestBody ShortLinkUpdateReqDTO requestParam) {
         shortLinkRemoteService.updateShortLink(requestParam);
         return Results.success();
