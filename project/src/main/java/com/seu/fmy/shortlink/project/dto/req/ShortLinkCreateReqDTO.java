@@ -5,11 +5,17 @@ import lombok.Data;
 
 import java.util.Date;
 
+
 /**
  * 短链接创建请求对象
  */
 @Data
 public class ShortLinkCreateReqDTO {
+
+    /**
+     * 协议
+     */
+    private String domainProtocol;
 
     /**
      * 域名
