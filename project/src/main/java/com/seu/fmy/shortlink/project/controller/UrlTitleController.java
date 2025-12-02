@@ -2,6 +2,7 @@ package com.seu.fmy.shortlink.project.controller;
 
 import com.seu.fmy.shortlink.project.common.convention.result.Result;
 import com.seu.fmy.shortlink.project.common.convention.result.Results;
+import com.seu.fmy.shortlink.project.service.UrlTitleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

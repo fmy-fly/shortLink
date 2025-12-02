@@ -1,3 +1,4 @@
+
 CREATE TABLE `t_link` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `domain` varchar(128) DEFAULT NULL COMMENT '域名',
